@@ -1,0 +1,8 @@
+h1 {
+  border: 1px solid black;
+  width: 350px;
+  height: 250px;
+  padding: 20px;
+  margin: 100px auto;
+  background-color: lightgrey;
+}

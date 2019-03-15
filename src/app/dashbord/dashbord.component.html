@@ -1,0 +1,6 @@
+<h1 *ngIf="!user">Hey! You're not allowed here, avada kedavra! *POFF*</h1>
+
+<div class="container" *ngIf="user">
+  <app-user-list [users]="userList"></app-user-list>
+  <app-edit-users (addUser)='addUser($event)' (removeUser)="deleteUser($event)"></app-edit-users>
+</div>

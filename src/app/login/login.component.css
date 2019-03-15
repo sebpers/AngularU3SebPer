@@ -1,0 +1,82 @@
+.loginBox {
+  background-color: lightgray;
+  width: 270px;
+  height: 230px;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.form-group2 {
+  margin-top: 10px;
+}
+
+h4 {
+  margin-bottom: 10px;
+}
+
+span {
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+input {
+  padding: 5px;
+  width: 100%;
+  border-radius: 2px;
+  border: none;
+  outline-style: none;
+}
+
+button {
+  background-color: #249d3e;
+  border: none;
+  border-radius: 2px;
+  padding: 7px;
+  color: #f9f9f9;
+  margin-top: 25px;
+}
+
+#createNewUser {
+  background-color: blue;
+  width: 150px;
+  margin-left: 5px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Invalid circle */
+.invalid {
+  background-color: red;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 4px;
+  color: red;
+}
+
+.valid {
+  background-color: green;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 4px;
+  color: green;
+}
+
+/* Invalid border */
+.ng-invalid:not(form).ng-touched:not(form) {
+  border: 2px solid red;
+}
+
+
+
+.ng-valid:not(form) {
+  border: 2px solid green;
+}

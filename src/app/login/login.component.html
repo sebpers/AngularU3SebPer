@@ -1,0 +1,38 @@
+<div class="loginBox" *ngIf="!loggedUser">
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group1">
+      <label for="email">Email</label>
+      <input [(ngModel)]="model.email" type="email" placeholder="email.." name="email" #email="ngModel" required email>
+
+      <div *ngIf="email.touched || email.valid">
+        <span *ngIf="email.errors?.required">Email is a required field!<span class="invalid"></span></span>
+        <span *ngIf="email.errors?.email">Invalid email<span class="invalid"></span></span>
+        <span *ngIf="email.valid">Valid email<span class="valid"></span></span>
+      </div>
+    </div>
+
+    <div class="form-group2">
+      <label for="password">Password</label>
+      <input [(ngModel)]="model.password" type="password" minlength="10" placeholder="password.." name="password"
+        #password="ngModel" required password>
+
+      <div *ngIf="password.touched || password.valid">
+        <span *ngIf="password.errors?.required">Password is required!<span class="invalid"></span></span>
+        <span *ngIf="password.errors?.password">Invalid password<span class="invalid"></span></span>
+        <span *ngIf="password.valid">Valid password<span class="valid"></span></span>
+      </div>
+
+    </div>
+
+    <button type="button" (click)="onSubmit()" routerLink="/dashbord">Login</button>
+    <button id="createNewUser" routerLink="/dashbord" [disabled]="!userName">Create a new user</button>
+  </form>
+</div>
+
+
+
+<div class="loginBox" *ngIf="loggedUser">
+  <h4>You are already logged in</h4>
+  <button (click)="logout()" routerLink="/">Logout</button>
+</div>
